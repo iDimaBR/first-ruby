@@ -1,0 +1,12 @@
+<h1>Artigos úteis</h1>
+
+<ul>
+    <% if @articles.size > 0 %>
+        <% @articles.each do |article| %>
+            <h3><b><%= article.title %></b></h3>
+            <p style="text-decoration:none"><%= article.body.at(0..50) %>... <%= link_to "Continuar", article %></p>
+        <% end %><br>
+    <% else %>
+        Nenhum artigo encontrado
+    <% end %>
+</ul>
